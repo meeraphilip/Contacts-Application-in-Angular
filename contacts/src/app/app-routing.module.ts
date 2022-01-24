@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo:'contacts', pathMatch: 'full'},
-  { path: 'contacts', loadChildren: () => import('./Modules/contacts/contacts.module').then(m => m.ContactsModule) },
-  { path: '**', redirectTo: 'contacts'}
+  { path: '', redirectTo:'home/contacts', pathMatch: 'full'},
+  { path: 'home', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule) },
+  { path: '**', redirectTo: 'home/contacts'}
 ];
 
 @NgModule({
